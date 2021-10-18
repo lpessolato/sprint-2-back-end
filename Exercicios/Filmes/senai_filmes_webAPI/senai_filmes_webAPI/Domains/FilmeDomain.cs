@@ -13,6 +13,8 @@ namespace senai_filmes_webAPI.Domains
         public int idFilme { get; set; }
         public int idGenero { get; set; }
         public string tituloFilme { get; set; }
+        public GeneroDomain genero { get; set; }
+
 
 
     }
