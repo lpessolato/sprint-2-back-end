@@ -9,5 +9,7 @@ namespace senai_Filmes2_webAPI.Interfaces
     interface IGeneroRepository
     {
         List<GeneroDomain> ListarTodos();
+
+        void Cadastrar(GeneroDomain novoGenero);
     }
 }

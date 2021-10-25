@@ -11,6 +11,26 @@ namespace senai_Filmes2_webAPI.Repositories
     public class GeneroRepository : IGeneroRepository
     {
         private string stringConexao = @"Data Source=NOTE0113H4\SQLEXPRESS; initial catalog=CATALOGO ;User Id=sa; pwd=Senai@132;";
+
+        public void Cadastrar(GeneroDomain novoGenero)
+        {
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryInsert = "Insert into GENERO (nomeGenero) values ('" + novoGenero.nomeGenero + "')";
+
+                con.Open();
+
+                using (SqlCommand cmd= new SqlCommand(queryInsert, con))
+                {
+                    cmd.ExecuteNonQuery();
+
+
+                }
+            }
+
+
+        }
+
         public List<GeneroDomain> ListarTodos()
         {
             List<GeneroDomain> listaGeneros = new List<GeneroDomain>();
