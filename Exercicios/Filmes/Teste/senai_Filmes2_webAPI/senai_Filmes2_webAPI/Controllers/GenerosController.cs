@@ -15,7 +15,7 @@ namespace senai_Filmes2_webAPI.Controllers
     [ApiController]
     public class GenerosController : ControllerBase
     {
-        private IGeneroRepository _GeneroRepository { get; set; } 
+        private IGeneroRepository _GeneroRepository { get; set; }
         public GenerosController()
         {
             _GeneroRepository = new GeneroRepository();
@@ -35,6 +35,65 @@ namespace senai_Filmes2_webAPI.Controllers
             return StatusCode(201);
 
         }
+        [HttpPut("{id}")]
+
+        public IActionResult Putidurl(int id, GeneroDomain generoAtualizado)
+        {
+            GeneroDomain generoBuscado = _GeneroRepository.BuscarPorId(id);
+
+            if (generoBuscado == null)
+            {
+                return NotFound(
+                    new
+                    {
+                        mensagem = "genero nao encontrado",
+                        err0 = true
+                    }
+                );
+            }
+
+            try
+            {
+                _GeneroRepository.AtualizarIdUrl(id, generoAtualizado);
+                return NoContent();
+
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
+        }
+
+
+
+
+
+        [HttpDelete("excluir/{id}")]
+        public IActionResult Delete(int id)
+        {
+            _GeneroRepository.Deletar(id);
+
+            return NoContent();
+        }
+
+
+        [HttpGet("{id}")]
+
+        public IActionResult GetById(int id)
+        {
+            GeneroDomain generoBuscado = _GeneroRepository.BuscarPorId(id);
+
+            if (generoBuscado == null)
+            {
+                return NotFound("Genero nao encontrado");
+            }
+            return Ok(generoBuscado);
+        }
+
+
+
 
     }
 }

@@ -12,20 +12,98 @@ namespace senai_Filmes2_webAPI.Repositories
     {
         private string stringConexao = @"Data Source=NOTE0113H4\SQLEXPRESS; initial catalog=CATALOGO ;User Id=sa; pwd=Senai@132;";
 
+        public void AtualizarIdCorpo(GeneroDomain generoAtualizado)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AtualizarIdUrl(int idGenero, GeneroDomain generoAtualizado)
+        {
+           using(SqlConnection con= new SqlConnection(stringConexao))
+            {
+                string queryUpdate = "update GENERO set nomeGenero = @nomeGenero where idGenero = @idGenero";
+
+                using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
+                {
+                    cmd.Parameters.AddWithValue("nomeGenero", generoAtualizado.nomeGenero);
+                    cmd.Parameters.AddWithValue("idGenero", idGenero);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            
+        }
+
+        public GeneroDomain BuscarPorId(int idGenero)
+        {
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelectbyId = "select nomeGenero, idGenero from GENERO where idGenero = @idGenero";
+                con.Open();
+
+                SqlDataReader reader;
+
+                using (SqlCommand cmd = new SqlCommand(querySelectbyId, con))
+                {
+                    cmd.Parameters.AddWithValue("@idGenero", idGenero);
+                    reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        GeneroDomain generobuscado = new GeneroDomain
+                        {
+                            idGenero = Convert.ToInt32(reader[1]),
+                            nomeGenero = Convert.ToString(reader[0])
+
+                        };
+                        return generobuscado;
+                    }
+                    return null;
+                }
+
+            }
+
+          
+        }
+
         public void Cadastrar(GeneroDomain novoGenero)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "Insert into GENERO (nomeGenero) values ('" + novoGenero.nomeGenero + "')";
+                string queryInsert = "Insert into GENERO (nomeGenero) values (@nomeGenero)";
 
                 con.Open();
 
                 using (SqlCommand cmd= new SqlCommand(queryInsert, con))
                 {
+                    cmd.Parameters.AddWithValue("@nomeGenero", novoGenero.nomeGenero);
+
                     cmd.ExecuteNonQuery();
 
 
                 }
+            }
+
+
+        }
+
+        public void Deletar(int idGenero)
+        {
+            using (SqlConnection con= new SqlConnection(stringConexao))
+            {
+                string queryDelete = "delete from GENERO where idGenero = @idgenero";
+                
+
+                using (SqlCommand cmd = new SqlCommand(queryDelete, con))
+                {
+                    cmd.Parameters.AddWithValue("@idgenero", idGenero);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                }
+
             }
 
 
