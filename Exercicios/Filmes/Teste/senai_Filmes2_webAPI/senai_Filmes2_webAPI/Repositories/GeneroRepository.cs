@@ -25,8 +25,8 @@ namespace senai_Filmes2_webAPI.Repositories
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
-                    cmd.Parameters.AddWithValue("nomeGenero", generoAtualizado.nomeGenero);
-                    cmd.Parameters.AddWithValue("idGenero", idGenero);
+                    cmd.Parameters.AddWithValue("@nomeGenero", generoAtualizado.nomeGenero);
+                    cmd.Parameters.AddWithValue("@idGenero", idGenero);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -121,7 +121,7 @@ namespace senai_Filmes2_webAPI.Repositories
                 SqlDataReader rdr;
 
                 using(SqlCommand cmd= new SqlCommand(querySelectAll, con))
-                {
+                {   
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
