@@ -10,7 +10,7 @@ namespace Senai.Rental.WebApi.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {
-        public string stringConexao = @"Data Source=NOTE0113C2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
+        public string stringConexao = @"Data Source=NOTE0113H2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
 
         public void AtualizarporURL(int idCliente, ClienteDomain clienteAtualizado)
         {
@@ -38,6 +38,7 @@ namespace Senai.Rental.WebApi.Repositories
                 SqlDataReader reader;
                 using (SqlCommand cmd = new SqlCommand(queryID, con))
                 {
+                    cmd.Parameters.AddWithValue("@idClientes", idCliente);
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {

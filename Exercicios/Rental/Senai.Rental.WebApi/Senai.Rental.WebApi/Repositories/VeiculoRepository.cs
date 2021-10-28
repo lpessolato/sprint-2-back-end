@@ -11,7 +11,7 @@ namespace Senai.Rental.WebApi.Repositories
     public class VeiculoRepository : IVeiculoRepository
 
     {
-        public string stringConexao = @"Data Source=NOTE0113C2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
+        public string stringConexao = @"Data Source=NOTE0113H2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
 
 
         public void AtualilzarporURL(int idVeiculo, VeiculoDomain veiculoAtualizado)
@@ -22,7 +22,7 @@ namespace Senai.Rental.WebApi.Repositories
                 using(SqlCommand cmd= new SqlCommand(queryURL, con))
                 {
                     cmd.Parameters.AddWithValue("@placa", veiculoAtualizado.placa);
-                    cmd.Parameters.AddWithValue("@idVeiucolo", idVeiculo);
+                    cmd.Parameters.AddWithValue("@idVeiculo", idVeiculo);
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
@@ -40,6 +40,7 @@ namespace Senai.Rental.WebApi.Repositories
                 SqlDataReader reader;
                 using(SqlCommand cmd= new SqlCommand(queryID, con))
                 {
+                    cmd.Parameters.AddWithValue("@idVeiculo", idVeiculo);
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {

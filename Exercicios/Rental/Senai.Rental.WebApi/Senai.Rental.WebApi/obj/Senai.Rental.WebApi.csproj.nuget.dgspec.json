@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49025642896\\Desktop\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj": {}
+    "C:\\Users\\49025642896\\sprint-2-back-end\\Exercicios\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49025642896\\Desktop\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj": {
+    "C:\\Users\\49025642896\\sprint-2-back-end\\Exercicios\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49025642896\\Desktop\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\49025642896\\sprint-2-back-end\\Exercicios\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
         "projectName": "Senai.Rental.WebApi",
-        "projectPath": "C:\\Users\\49025642896\\Desktop\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
+        "projectPath": "C:\\Users\\49025642896\\sprint-2-back-end\\Exercicios\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\Senai.Rental.WebApi.csproj",
         "packagesPath": "C:\\Users\\49025642896\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49025642896\\Desktop\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\49025642896\\sprint-2-back-end\\Exercicios\\Rental\\Senai.Rental.WebApi\\Senai.Rental.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\49025642896\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

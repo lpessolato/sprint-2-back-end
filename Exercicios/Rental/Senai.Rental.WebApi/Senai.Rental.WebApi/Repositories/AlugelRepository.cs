@@ -11,7 +11,7 @@ namespace Senai.Rental.WebApi.Repositories
     public class AlugelRepository : IAluguelRepository
 
     {
-        public string stringConexao = @"Data Source=NOTE0113C2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
+        public string stringConexao = @"Data Source=NOTE0113H2\SQLEXPRESS; initial catalog=LOCADORA; User id=sa; pwd=Senai@132;";
 
 
 
@@ -41,6 +41,7 @@ namespace Senai.Rental.WebApi.Repositories
                 SqlDataReader reader;
                 using (SqlCommand cmd = new SqlCommand(queryID, con))
                 {
+                    cmd.Parameters.AddWithValue("@idAluguel", idAluguel);
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
@@ -69,7 +70,7 @@ namespace Senai.Rental.WebApi.Repositories
                 using (SqlCommand cmd = new SqlCommand(queryAdd, con))
                 {
                     cmd.Parameters.AddWithValue("@idVeiculo", novoAluguel.idVeiculo);
-                    cmd.Parameters.AddWithValue("@idClientes", novoAluguel.idClientes);
+                    cmd.Parameters.AddWithValue("@idCliente", novoAluguel.idClientes);
                     cmd.Parameters.AddWithValue("@data_inicio", novoAluguel.data_inicio);
                     cmd.Parameters.AddWithValue("@data_fim", novoAluguel.data_fim);
                     con.Open();
