@@ -11,7 +11,7 @@ namespace senai_Filmes2_webAPI.Repositories
     public class FilmeRepository : IFilmeRepository
 
     {
-        private string stringConexao = @"Data Source=NOTE0113H4\SQLEXPRESS; initial catalog=CATALOGO ;User Id=sa; pwd=Senai@132;";
+        private string stringConexao = @"Data Source=NOTE0113H3\SQLEXPRESS; initial catalog=CATALOGO; User Id=sa; pwd=Senai@132;";
         public void Cadastrar(FilmeDomain novoFilme)
         {
             throw new NotImplementedException();
