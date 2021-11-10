@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai_Filmes2_webAPI.Domains;
 using senai_Filmes2_webAPI.Interfaces;
@@ -78,7 +79,7 @@ namespace senai_Filmes2_webAPI.Controllers
             return NoContent();
         }
 
-
+        [Authorize(Roles = "administrador, comum")]
         [HttpGet("{id}")]
 
         public IActionResult GetById(int id)

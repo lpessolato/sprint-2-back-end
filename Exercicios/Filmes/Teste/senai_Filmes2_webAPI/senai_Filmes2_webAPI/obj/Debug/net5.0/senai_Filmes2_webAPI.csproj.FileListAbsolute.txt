@@ -65,3 +65,10 @@ C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_web
 C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\senai_Filmes2_webAPI.xml
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\obj\Debug\net5.0\senai_Filmes2_webAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\49025642896\sprint-2-back-end\Exercicios\Filmes\Teste\senai_Filmes2_webAPI\senai_Filmes2_webAPI\obj\Debug\net5.0\senai_Filmes2_webAPI.xml
