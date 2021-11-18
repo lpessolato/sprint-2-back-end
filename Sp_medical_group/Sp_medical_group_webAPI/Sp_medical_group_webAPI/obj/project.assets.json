@@ -7358,19 +7358,19 @@
     ]
   },
   "packageFolders": {
-    "D:\\Users\\pesso\\.nuget\\packages\\": {}
+    "C:\\Users\\49025642896\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\pesso\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\49025642896\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI.csproj",
       "projectName": "Sp_medical_group_webAPI",
-      "projectPath": "D:\\Users\\pesso\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI.csproj",
-      "packagesPath": "D:\\Users\\pesso\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\pesso\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\obj\\",
+      "projectPath": "C:\\Users\\49025642896\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI.csproj",
+      "packagesPath": "C:\\Users\\49025642896\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\49025642896\\sprint-2-back-end\\Sp_medical_group\\Sp_medical_group_webAPI\\Sp_medical_group_webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Users\\pesso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\49025642896\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7429,7 +7429,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

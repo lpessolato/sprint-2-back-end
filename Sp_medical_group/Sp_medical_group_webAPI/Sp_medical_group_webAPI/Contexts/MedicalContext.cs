@@ -1,11 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Sp_medical_group_webAPI.Domains;
 
 #nullable disable
-
-//Scaffold-DbContext "Data Source=DESKTOP-LC177KN\SQLEXPRESS; initial catalog=Sp_medical_group; user id=sa; pwd=senai@132;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context MedicalContext
 
 namespace Sp_medical_group_webAPI.Contexts
 {
@@ -34,7 +30,7 @@ namespace Sp_medical_group_webAPI.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-LC177KN\\SQLEXPRESS; initial catalog=Sp_medical_group; user id=sa; pwd=senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=NOTE0113H4\\SQLEXPRESS; initial catalog=Sp_medical_group; user id=sa; pwd=Senai@132;");
             }
         }
 
@@ -45,7 +41,7 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Atendimento>(entity =>
             {
                 entity.HasKey(e => e.IdAtendimento)
-                    .HasName("PK__Atendime__CCF8C80C4F368ADA");
+                    .HasName("PK__Atendime__CCF8C80C70B498BB");
 
                 entity.ToTable("Atendimento");
 
@@ -85,11 +81,11 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Clinica>(entity =>
             {
                 entity.HasKey(e => e.IdClinica)
-                    .HasName("PK__Clinica__C73A605532E73749");
+                    .HasName("PK__Clinica__C73A6055991DF336");
 
                 entity.ToTable("Clinica");
 
-                entity.HasIndex(e => e.Cnpj, "UQ__Clinica__AA57D6B411041D61")
+                entity.HasIndex(e => e.Cnpj, "UQ__Clinica__AA57D6B41313D055")
                     .IsUnique();
 
                 entity.Property(e => e.IdClinica)
@@ -134,7 +130,7 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Departamento>(entity =>
             {
                 entity.HasKey(e => e.IdDepartamento)
-                    .HasName("PK__Departam__C225F98D0CD34060");
+                    .HasName("PK__Departam__C225F98D5E76BCE2");
 
                 entity.ToTable("Departamento");
 
@@ -150,11 +146,11 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Medico>(entity =>
             {
                 entity.HasKey(e => e.IdMedico)
-                    .HasName("PK__Medico__4E03DEBAB5F7AC14");
+                    .HasName("PK__Medico__4E03DEBA562064CE");
 
                 entity.ToTable("Medico");
 
-                entity.HasIndex(e => e.Crm, "UQ__Medico__C1F887FFA7C7D76A")
+                entity.HasIndex(e => e.Crm, "UQ__Medico__C1F887FF99D6E82C")
                     .IsUnique();
 
                 entity.Property(e => e.IdMedico).HasColumnName("idMedico");
@@ -197,14 +193,14 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Paciente>(entity =>
             {
                 entity.HasKey(e => e.IdPaciente)
-                    .HasName("PK__Paciente__F48A08F2E86C72B8");
+                    .HasName("PK__Paciente__F48A08F2C06794C2");
 
                 entity.ToTable("Paciente");
 
-                entity.HasIndex(e => e.Rg, "UQ__Paciente__321537C854596001")
+                entity.HasIndex(e => e.Rg, "UQ__Paciente__321537C822406F7E")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Cpf, "UQ__Paciente__C1F89731D556A474")
+                entity.HasIndex(e => e.Cpf, "UQ__Paciente__C1F8973181F1075E")
                     .IsUnique();
 
                 entity.Property(e => e.IdPaciente).HasColumnName("idPaciente");
@@ -256,7 +252,7 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Status>(entity =>
             {
                 entity.HasKey(e => e.IdStatus)
-                    .HasName("PK__Status__01936F74CFBDC640");
+                    .HasName("PK__Status__01936F748CC1DD95");
 
                 entity.ToTable("Status");
 
@@ -274,7 +270,7 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Tipo>(entity =>
             {
                 entity.HasKey(e => e.IdTipo)
-                    .HasName("PK__Tipo__BDD0DFE12B97A7F4");
+                    .HasName("PK__Tipo__BDD0DFE175F42159");
 
                 entity.ToTable("Tipo");
 
@@ -292,7 +288,7 @@ namespace Sp_medical_group_webAPI.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__Usuario__645723A671B2DCF0");
+                    .HasName("PK__Usuario__645723A6A33C750C");
 
                 entity.ToTable("Usuario");
 

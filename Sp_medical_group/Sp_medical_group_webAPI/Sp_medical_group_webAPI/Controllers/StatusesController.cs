@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Sp_medical_group_webAPI.Domains;
 using Sp_medical_group_webAPI.Interfaces;
 using Sp_medical_group_webAPI.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Sp_medical_group_webAPI.Controllers
 {

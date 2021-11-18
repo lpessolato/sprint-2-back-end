@@ -4,7 +4,6 @@ using Sp_medical_group_webAPI.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Sp_medical_group_webAPI.Repositories
 {
